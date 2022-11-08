@@ -16,7 +16,7 @@ data.fillna({'受傷程度': 0},inplace=True)
 X = data[['光線','天候']]
 y = data[["受傷程度"]]
 #訓練
-X_train, X_test, y_Train, y_test = train_test_split(X, y, test_size=0.5, random_state=1)
+X_train, X_test, y_Train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 #trainer
 dtree =tree.DecisionTreeClassifier()
 clf = dtree.fit(X_train, y_Train)
